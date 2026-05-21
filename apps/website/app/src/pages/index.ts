@@ -1,1 +1,1 @@
-export * from './concrete-calculator/concrete-calculator.page'
+export * from './home/home';

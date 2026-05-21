@@ -13,7 +13,7 @@ const Container = styled.div`
   width: 30rem;
   max-width: 30rem;
 
-  background-color: var(--color-background-strong);
+  background-color: var(--overlay);
 
   user-select: none;
 

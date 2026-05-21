@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 0rem 2rem;
   height: 6rem;
   gap: 0.5rem;
-  background-color: var(--color-background-strong);
+  background-color: var(--overlay);
 
   .switches {
     display: flex;

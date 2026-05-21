@@ -1,11 +1,11 @@
-import styled from '@emotion/styled';
-import { device } from '@shared/hooks';
+import styled from "@emotion/styled";
+import { device } from "@shared/hooks";
 
 // import LogoSVG from '../../assets/icons/hard-hat.svg?react';
-import { Title } from '@shared/components';
-import { NavLink } from 'react-router-dom';
-import { Path } from '../../models/paths';
-import { ICONS } from '@shared/components';
+import { Title } from "@shared/components";
+import { NavLink } from "react-router-dom";
+import { Path } from "../../models/paths";
+import { ICONS } from "@shared/components";
 
 const LogoNavLink = styled(NavLink)`
   display: flex;
@@ -31,7 +31,7 @@ const LogoNavLink = styled(NavLink)`
   }
 
   .primary {
-    color: var(--color-primary);
+    color: var(--color-accent);
   }
 
   @media ${device.tablet} {
@@ -46,14 +46,12 @@ const LogoNavLink = styled(NavLink)`
 `;
 
 export const NavLogo = () => {
-  return (
-    <LogoNavLink to={Path.HOME}>
-      <div className="logo">
-        {ICONS.Trowl}
-      </div>
-      <Title>
-        HowMuchMate<span className="primary">.</span>
-      </Title>
-    </LogoNavLink>
-  );
+	return (
+		<LogoNavLink to={Path.HOME}>
+			<div className="logo">{ICONS.Trowl}</div>
+			<Title>
+				Wet Coast Soaps<span className="primary">.</span>
+			</Title>
+		</LogoNavLink>
+	);
 };

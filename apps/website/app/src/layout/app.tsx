@@ -11,7 +11,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background-color: var(--color-background);
+  background-color: var(--background);
 
   .row {
     display: flex;
@@ -24,7 +24,7 @@ const Container = styled.div`
     flex-grow: 1;
     height: calc(100dvh - 6rem); // deduct height of navbar
     overflow-y: auto;
-    background-color: var(--color-background-medium);
+    background-color: var(--background);
 
     /* margin: 1rem; */
     padding: 1rem;
@@ -45,7 +45,7 @@ export const AppLayoutWebsite = () => {
 				<Navbar />
 
 				<div className="row">
-					<Sidebar />
+					{/* <Sidebar /> */}
 					<main>
 						<Routes>
 							{General_Nav_Items.map((item) => (
