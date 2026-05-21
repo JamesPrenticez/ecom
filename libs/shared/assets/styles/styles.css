@@ -1,0 +1,44 @@
+
+@import url("./fonts.css");
+@import url("./globals.css");
+@import url("./preflight.css");
+
+@import url("./colors.css");
+@import url("./theme-default.css");
+@import url("./theme-dark.css");
+@import url("./theme-light.css");
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  /* outline: 0.5rem solid rgba(var(--color-contrast-opacity), 0.7); */
+  outline: 0.3rem solid rgba(var(--color-action-hover-opacity), 0.7);
+  outline-offset: -0.3rem;
+}
+
+.custom-scrollbar-narrow::-webkit-scrollbar {
+    width: 0.3rem;
+    height: calc(max(0.6rem, 3px));
+    background: var(--color-black-80);
+    border-radius: 1rem;
+}
+
+.custom-scrollbar-narrow::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0.6rem;
+    background: var(--color-black-80);
+    border-radius: 1rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 1rem;
+    cursor: pointer;
+}
