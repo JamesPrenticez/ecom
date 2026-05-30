@@ -1,12 +1,3 @@
-import styled from "@emotion/styled";
-import { Home } from "../home/home";
+import { Browse } from './browse';
 
-const Container = styled.div``;
-
-export const BrowsePage = () => {
-	return (
-		<Container>
-			<Home />
-		</Container>
-	);
-};
+export const BrowsePage = () => <Browse />;

@@ -1,14 +1,20 @@
 .theme-dark {
-  --color-primary: #2F4638;
-  --color-secondary: #6E7F68;
+  --color-primary: #00b9e2;
+  --color-primary-accent: #0082a8;
 
-  --color-accent: #67a1c7;
-  --color-accent-1: #8A6852;
-  --color-accent-2: #D8CCBC;
+  --color-secondary: #2d8c4e;
+  --color-secondary-accent: #1a5c32;
+
+  --color-tertiary: #a8c84a;
+  --color-tertiary-accent: #6e8f1e;
 
   --color-muted: #6A6E69;
   --overlay: color-mix(in srgb, #373b39 20%, transparent);
   --background: #040b00;
+
+  --text-primary: #f0f8ff;
+  --text-secondary: #8aafc4;
+  --text-muted: #6A6E69;
 }
 
 /*

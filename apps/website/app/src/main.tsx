@@ -1,20 +1,22 @@
-import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import * as ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { AppLayoutWebsite } from './layout/app';
-
-// Local
 import './styles/styles.css';
-// Shared
 import '@shared/assets/styles/styles.css';
+
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { staleTime: 60_000 } },
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  // <StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
+    <QueryClientProvider client={queryClient}>
       <AppLayoutWebsite />
-    </BrowserRouter>
-  // </StrictMode>
+    </QueryClientProvider>
+  </BrowserRouter>
 );

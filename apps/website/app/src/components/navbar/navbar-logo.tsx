@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { device } from "@shared/hooks";
 
-// import LogoSVG from '../../assets/icons/hard-hat.svg?react';
+import { LogoSVG } from '@shared/assets/logos';
 import { Title } from "@shared/components";
 import { NavLink } from "react-router-dom";
 import { Path } from "../../models/paths";
@@ -31,7 +31,7 @@ const LogoNavLink = styled(NavLink)`
   }
 
   .primary {
-    color: var(--color-accent);
+    color: var(--color-primary);
   }
 
   @media ${device.tablet} {
@@ -48,9 +48,9 @@ const LogoNavLink = styled(NavLink)`
 export const NavLogo = () => {
 	return (
 		<LogoNavLink to={Path.HOME}>
-			<div className="logo">{ICONS.Trowl}</div>
+			<div className="logo"><LogoSVG /></div>
 			<Title>
-				Wet Coast Soaps<span className="primary">.</span>
+				Wild Wash<span className="primary">.</span>
 			</Title>
 		</LogoNavLink>
 	);

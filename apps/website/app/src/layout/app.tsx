@@ -3,6 +3,7 @@ import { ThemeWrapper } from "@shared/theme";
 
 import { Navbar } from "../components/navbar/navbar";
 import { Sidebar } from "../components/sidebar/sidebar";
+import { CartDrawer } from "../components/cart/cart-drawer";
 import { Route, Routes } from "react-router-dom";
 import { General_Nav_Items, Other_Nav_Items } from "../data/navigation.data";
 import { device } from "@shared/hooks";
@@ -43,6 +44,8 @@ export const AppLayoutWebsite = () => {
 		<ThemeWrapper>
 			<Container>
 				<Navbar />
+
+				<CartDrawer />
 
 				<div className="row">
 					{/* <Sidebar /> */}

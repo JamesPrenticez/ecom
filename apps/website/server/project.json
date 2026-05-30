@@ -1,0 +1,79 @@
+{
+  "name": "website-server",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/website/server/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/website/server",
+        "main": "apps/website/server/src/server.ts",
+        "tsConfig": "apps/website/server/tsconfig.app.json",
+        "assets": [
+          "apps/website/server/src/assets"
+        ],
+        "webpackConfig": "apps/website/server/webpack.config.js",
+        "generatePackageJson": true
+      },
+      "configurations": {
+        "development": {
+          "outputHashing": "none"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "buildTarget": "website-server:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "website-server:build:development"
+        },
+        "production": {
+          "buildTarget": "website-server:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "db-migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx apps/website/server/src/database/migrate.ts"
+      }
+    },
+    "db-seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx apps/website/server/src/database/seed.ts"
+      }
+    },
+    "db-setup": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "nx run website-server:db-migrate",
+          "nx run website-server:db-seed"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

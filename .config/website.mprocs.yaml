@@ -1,3 +1,10 @@
 procs:
   'website:app':
     shell: 'nx serve website-app'
+  'website:server':
+    shell: 'nx serve website-server'
+  'admin':
+    shell: 'nx serve admin'
+  'website:db:setup':
+    shell: 'nx run website-server:db-setup'
+    autostart: false

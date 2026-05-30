@@ -1,0 +1,19 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --admin-sidebar-width: 24rem;
+  --admin-header-height: 6rem;
+  --admin-bg: #0d0f0e;
+  --admin-surface: #151917;
+  --admin-border: rgba(255,255,255,0.07);
+  --admin-hover: rgba(255,255,255,0.04);
+}
+
+body {
+  margin: 0;
+  background: var(--admin-bg);
+  color: var(--text-primary, #f0f8ff);
+  font-family: Quicksand, sans-serif, system-ui;
+}
+
+a { text-decoration: none; color: inherit; }

@@ -14,6 +14,9 @@ export default defineConfig({
     fs: {
       allow: [path.resolve(__dirname, '../../../libs/shared')],
     },
+    proxy: {
+      '/api': { target: 'http://localhost:4000', changeOrigin: true },
+    },
   },
   preview: {
     port: 4300,

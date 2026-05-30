@@ -1,3 +1,0 @@
-procs:
-  'website:app':
-    shell: 'nx serve draw-app'
